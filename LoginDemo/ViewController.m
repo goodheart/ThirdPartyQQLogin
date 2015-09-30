@@ -12,11 +12,15 @@
 
 @end
 
+/*
+ 如果出现“下载最新版QQ”的提示，在info.plist里面添加Bundle Display Name 并设置值为$(PRODUCT_NAME)即可
+ */
+
 @implementation ViewController
+#pragma mark - response Method
 - (IBAction)loginAction:(id)sender {
     
     [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-//        NSLog(@"%@",result == YES ? @"YES" : @"NO");
         if (YES == result) {
             NSDictionary * sourceData = [userInfo sourceData];
             NSLog(@"userInfo : %@",sourceData);
@@ -26,6 +30,7 @@
     }];
 }
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
