@@ -20,12 +20,7 @@
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.haoyi.LoginDemo</string>
-			</array>
-		</dict>
+		<dict/>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -40,8 +35,6 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>QQ41CB3C70</string>
-		<string>tencent1103838320</string>
 		<string>mqzoneopensdk</string>
 		<string>mqzoneopensdkapi</string>
 		<string>mqzoneopensdkapi19</string>

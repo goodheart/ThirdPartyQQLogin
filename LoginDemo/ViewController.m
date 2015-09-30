@@ -16,7 +16,13 @@
 - (IBAction)loginAction:(id)sender {
     
     [ShareSDK getUserInfoWithType:ShareTypeQQSpace authOptions:nil result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
-        NSLog(@"%@",result == YES ? @"YES" : @"NO");
+//        NSLog(@"%@",result == YES ? @"YES" : @"NO");
+        if (YES == result) {
+            NSDictionary * sourceData = [userInfo sourceData];
+            NSLog(@"userInfo : %@",sourceData);
+        } else {
+            NSLog(@"qq login failed");
+        }
     }];
 }
 
